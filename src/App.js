@@ -1,4 +1,4 @@
-import Layout from "./Components/Layout/Layout";
+import Layout from "./Components/Loyout/Layout";
 
 const App = () => {
     return <Layout/>
