@@ -1,0 +1,139 @@
+.footer{
+    padding: 50px 0px;
+    background: #fde4e4;
+}
+
+.container{
+    max-width: 1170px;
+    margin: auto;
+    padding: 5px 5px;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
+    grid-column-gap: 25px;
+    grid-row-gap: 0px;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    flex: 1 0 0%;
+}
+
+.footer__logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo{
+    width: 3.5rem;
+    object-fit: cover;
+}
+
+.footer__title{
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.footer__description{
+    margin-top: 5px;
+    text-align: justify;
+    font-size: 0.8rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+}
+
+.list__name{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.list__group{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.list__group-item{
+    display: flex;
+    font-weight: 300;
+    flex-direction: column;
+
+}
+
+.list_group-link{
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.list__group-title{
+    margin-bottom: 20px;
+}
+
+.footer__link{
+    margin-bottom: 15px;
+    font-size: 1rem;
+
+font-weight: 300;}
+
+.footer__news{
+    padding: 5px 10px;
+    border: 1px solid #212245;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.footer__news-send{
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.footer__news-send:focus{
+    outline: none;
+}
+
+.footer__news-send::placeholder{
+    color: #212245;
+}
+
+.icon__send{
+    cursor: pointer;
+    background: #212245;
+    padding: 8px 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.copyright__text{
+    font-size: 0.8rem;
+    color: #df2020;
+}
+
+.social__links{
+    width: -webkit-fill-available;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.social__icon{
+    background: #df2020;
+    padding: 5px 30px;
+    border-radius: 5px;
+}
