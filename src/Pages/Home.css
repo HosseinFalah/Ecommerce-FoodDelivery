@@ -1,3 +1,12 @@
+.mt-2{
+    margin-top: 20px;
+}
+
+.d-flex{
+    display: flex;
+    flex-direction: column;
+}
+
 .main__row{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -69,4 +78,41 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.food__category{
+    background: #df2020;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column-gap: 20px;
+}
+
+.food__btn,
+.all_category{
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food_btn_Active{
+    background: #fff;
+    border-radius: 5px;
+    color: #df2020;
+}
+
+.food__img{
+    width: 20px;
+    height: 20px;
 }

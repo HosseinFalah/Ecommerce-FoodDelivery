@@ -1,0 +1,20 @@
+.main__category{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #fde4e4;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.main__category:hover{
+    transform: translateY(-15px);
+}
+
+.main__category-title{
+    font-size: 1rem;
+    font-weight: 400;
+}

@@ -3,15 +3,9 @@
     background: #fde4e4;
 }
 
-.container{
-    max-width: 1170px;
-    margin: auto;
-    padding: 5px 5px;
-}
-
 .row{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     grid-template-rows: 1fr;
     grid-column-gap: 25px;
     grid-row-gap: 0px;

@@ -1,0 +1,37 @@
+.text-center{
+    text-align: center;
+}
+
+.feature__subtitle{
+    color: #df2020;
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.feature__title{
+    font-size: 2rem;
+    line-height: 50px;
+}
+
+.feature__title span{
+    color: #df2020;
+}
+
+.feature__description{
+    color: #777;
+    line-height: 2rem;
+    margin-bottom: 20px;
+}
+
+.feature__box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 10px;
+    text-align: center;
+}
+
+.feature__img{
+    width: 30%;
+    object-fit: cover;
+}
