@@ -37,7 +37,7 @@ const Feature = () => {
                             <h2 className="feature__title">Just Sit Back at Home</h2>
                             <h2 className="feature__title">We Will <span>Task Care</span></h2>
                             <div className="feature__description">
-                                <p className="feature__text">Slow roasted in a juice blend, our roast pork is a moist and tender marvel crowned with sautéed onions?</p>
+                                <p className="feature__text">Slow roasted in a juice blend, our roast pork is crowned with sautéed onions?</p>
                                 <p className="feature__text">For big appetites, this dish doubles up the delicious offering with 1/2 of a grilled chicken?</p>
                             </div>
                         </div>

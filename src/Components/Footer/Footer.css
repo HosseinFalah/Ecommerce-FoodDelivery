@@ -8,7 +8,7 @@
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     grid-template-rows: 1fr;
     grid-column-gap: 25px;
-    grid-row-gap: 0px;
+    grid-row-gap: 20px;
 }
 
 .col{
@@ -130,4 +130,26 @@ font-weight: 300;}
     background: #df2020;
     padding: 5px 30px;
     border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .footer__title,
+    .list__name,
+    .list_group-link{
+        font-size: 1.1rem;
+    }
+
+    .footer__description,
+    .list__group-title{
+        font-size: 0.7rem;
+    }
+
+    .footer__news{
+        padding: 3px 10px;
+    }
+
+    .icon__send{
+        font-size: 1rem;
+        padding: 10px 10px;
+    }
 }

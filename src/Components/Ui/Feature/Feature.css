@@ -35,3 +35,26 @@
     width: 30%;
     object-fit: cover;
 }
+
+@media only screen and (max-width: 768px) {
+    .feature__box{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-column-gap: 10px;
+        text-align: center;
+    }
+
+    .feature__subtitle{
+        font-size: 1rem;
+    }
+
+    .feature__title{
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+
+    .feature__text{
+        font-size: 0.8rem;
+        
+    }
+}

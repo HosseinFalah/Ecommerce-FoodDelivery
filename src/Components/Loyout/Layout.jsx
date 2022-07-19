@@ -9,7 +9,7 @@ const Layout = () => {
     return (
         <>
             <Header/>
-                <main>
+                <main className="p-2">
                     <Routes/>
                 </main>        
             <Footer/>    

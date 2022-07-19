@@ -49,3 +49,18 @@
 .add_to_cart:hover{
     transform: scale(1.1);
 }
+
+@media only screen and (max-width: 1000px) {
+    .product__item{
+        padding: 20px;
+    }
+
+    .product__title{
+        font-size: 0.8rem;
+    }
+
+    .add_to_cart{
+        padding: 5px 15px;
+        font-size: 0.7rem;
+    }
+}

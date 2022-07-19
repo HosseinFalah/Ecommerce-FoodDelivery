@@ -6,25 +6,39 @@ import { useState, useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { BiCheckShield } from "react-icons/bi";
 import { AiFillCar } from "react-icons/ai";
+import { AiOutlineCheckCircle } from "react-icons/ai";
 
 //Components
 import hero from "../Asset/images/hero.png";
 import Feature from "../Components/Ui/Feature/Feature";
 import Category from "../Components/Ui/Category/Category";
 import ProductCart from "../Components/Ui/ProductCart/ProductCart";
+import TestimonialSlider from "../Components/Ui/Slider/TestimonialSlider";
 import "./Home.css";
 
+// get Point Api
 import products from "../Asset/fake-data/products";
 
+// Img Banner
 import foodCategory_1 from "../Asset/images/hamburger.png";
 import foodCategory_2 from "../Asset/images/pizza.png";
 import foodCategory_3 from "../Asset/images/bread.png";
 
+import whyImg from "../Asset/images/location.png";
+import netWorkImg from "../Asset/images/network.png";
 
 const Home = () => {
 
     const [category, setCategory] = useState("ALL");
-    const [allProducts, setAllProducts] = useState(products)
+    const [allProducts, setAllProducts] = useState(products);
+
+    const [hotPizza, setHotPizza] = useState([]);
+
+    useEffect(() => {
+        const filteredPizaa = products.filter(item => item.category === "Pizza")
+        const slicePizza = filteredPizaa.slice(0, 4)
+        setHotPizza(slicePizza)
+    }, [])
 
     useEffect(() => {
         if (category === "ALL") {
@@ -47,7 +61,7 @@ const Home = () => {
                 <div className="container">
                     <div className="main__row">
                         <div className="col">
-                            <div className="main__content">
+                            <div className="main__content mt-2">
                                 <h5>Easy Way To Make An Order</h5>
                                 <h1 className="main__title">
                                     <span className="main__display">Hungry? </span>
@@ -122,6 +136,81 @@ const Home = () => {
                                     <ProductCart product={product}/>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="container">
+                    <div className="main__row mb-2">
+                        <div className="col">
+                            <img src={whyImg} className="img__fluid" alt="why_tasty_treat" />
+                        </div>
+                        <div className="col">
+                            <div className="why__tasty-treat">
+                                <h2 className="why__tasty-title">Why <span>Tasty Treat?</span></h2>
+                                <p className="mt-2 why__tasty-description">The brand is present in many ready-to-eat indulgence categories, from biscuits to namkeens,
+                                    beverages, sauces, ready-to-eat snacks, frozen snacks, candies, mithai and more. No matter
+                                    which category you try, Tasty Treat assures you of high quality deliciousness! Chak Chak
+                                    Chabao!
+                                </p>
+                                <div className="tasty__listgroup mt-2">
+                                    <div className="tasty__listgroup-item">
+                                        <p className="tasty__title">
+                                            <AiOutlineCheckCircle color="#df2020" fontSize={20}/>
+                                            Fresh and tasty foods
+                                        </p>
+                                        <p className="mt-2 tasty__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div className="tasty__listgroup-item">
+                                        <p className="tasty__title">
+                                            <AiOutlineCheckCircle color="#df2020" fontSize={20}/>
+                                            Quality support
+                                        </p>
+                                        <p className="mt-2 tasty__desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div className="tasty__listgroup-item">
+                                        <p className="tasty__title">
+                                            <AiOutlineCheckCircle color="#df2020" fontSize={20}/>  
+                                            Order from any location
+                                        </p>
+                                        <p className="mt-2 tasty__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="container">
+                    <div className="col">
+                        <div className="col mt-2 mx-auto">
+                            <h2 className="mb-2">Hot Pizza</h2>
+                        </div>
+                        <div className="row">
+                        {hotPizza.map(product => (
+                            <ProductCart key={uuidv4()} product={product}/>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="container">
+                    <div className="main__row">
+                        <div className="col">
+                            <div className="testimonial mt-2">
+                                <h5 className="testimonial__subtirle mb-2">Testimonial</h5>
+                                <h2 className="testimonial_title mb-2">What our <span>customers</span> are saying</h2>
+                                <p className="testimonial_description"> 
+                                    You should always include testimonials in your copy. The reader finds it easier to believe the endorsement of a fellow consumer than the puffery of an anonymous copywriter.
+                                </p>
+                            </div>
+                            <TestimonialSlider/>
+                        </div>
+                        <div className="col">
+                            <img src={netWorkImg} className="img__fluid" alt="NetWork" />
                         </div>
                     </div>
                 </div>

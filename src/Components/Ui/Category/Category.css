@@ -18,3 +18,18 @@
     font-size: 1rem;
     font-weight: 400;
 }
+
+@media only screen and (max-width: 768px) {
+    .main__category{
+        padding: 20px 15px;
+    }
+
+    .main__category-img img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .main__category-title{
+        font-size: 0.8rem;
+    }
+}

@@ -2,6 +2,18 @@
     margin-top: 20px;
 }
 
+.mb-2{
+    margin-bottom: 20px;
+}
+
+.mx-auto{
+    margin: auto;
+}
+
+.p-2{
+    padding: 0px 10px;
+}
+
 .d-flex{
     display: flex;
     flex-direction: column;
@@ -115,4 +127,121 @@
 .food__img{
     width: 20px;
     height: 20px;
+}
+
+.why__tasty-title{
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.why__tasty-title span {
+    color: #df2020;
+}
+
+.why__tasty-description{
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.5rem;
+}
+
+.tasty__listgroup-item{
+    margin-top: 20px;
+    font-weight: 400;
+    color: #444;
+}
+
+.tasty__title{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.testimonial__subtirle{
+    color: #df2020;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.testimonial_title span {
+    color: #df2020;
+}
+
+.testimonial_description{
+    color: #777;
+    line-height: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .main__content h5{
+        font-size: 0.8rem;
+    }
+
+    .main__title{
+        font-size: 1.8rem;
+        line-height: 40px;
+    }
+
+    .main__description{
+        font-size: 0.8rem;
+        line-height: 25px;
+    }
+
+    .btn{
+        padding: 5px 15px;
+        font-size: 0.7rem;
+    }
+
+    .main__icon{
+        font-size: 0.7rem;
+    }
+
+    .food__category{
+        padding: 15px;
+    }
+
+    .food__category button{
+        padding: 5px 15px;
+        font-size: .7rem;
+    }
+
+    .why__tasty-title{
+        font-size: 1.6rem;
+    }
+
+    .why__tasty-description{
+        font-size: 0.7rem;
+    }
+
+    .tasty__title{
+        font-size: 1rem;
+    }
+
+    .tasty__desc{
+        font-size: 0.8rem;
+    }
+
+    .testimonial__subtirle{
+        font-size: 1rem;
+    }
+
+    .testimonial_description{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .main__content{
+        text-align: center;
+    }
+
+    .main__btns{
+        justify-content: center;
+    }
+
+    .main__icons{
+        justify-content: center;
+    }
 }
