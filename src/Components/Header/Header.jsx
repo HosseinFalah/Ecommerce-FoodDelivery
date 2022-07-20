@@ -1,8 +1,9 @@
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { NavLink } from "react-router-dom";
 
 import logo from "../../Asset/images/res-logo.png";
+
 import { GrMenu } from "react-icons/gr";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -17,11 +18,19 @@ const nav__links = [
 
 const Header = () => {
     const menuRef = useRef(null)
+    const stickyNavbar = useRef(null)
     const toggleMenu = () => menuRef.current.classList.toggle("show__menu")
 
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80)
+                stickyNavbar.current.classList.add("navbar__stiky")
+            else stickyNavbar.current.classList.remove("navbar__stiky")
+        })
+    }, [])
 
     return (
-        <header className="navbar">
+        <header className="navbar" ref={stickyNavbar}>
             <div className="container">
                 <div className="navbar__main">
                     <div className="navbar__logo">

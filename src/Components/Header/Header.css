@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 5px 0px;
 }
 
 .navbar__logo{
@@ -21,13 +22,13 @@
 }
 
 .navbar__img{
-    width: 4rem;
+    width: 3rem;
     object-fit: cover;
 }
 
 .navbar__brand{
     margin: 4px 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -100,6 +101,16 @@
     justify-content: center;
 }
 
+.navbar__stiky{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 999;
+    box-shadow: 5px 5px 15px 0px #c3c3c3;
+    transition: all 0.4s ease;
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media screen and (max-width: 768px) {
     .container{
@@ -109,6 +120,10 @@
 
 /* Large devices (desktops, 992px and up) */
 @media screen and (max-width: 992px) {
+    .navbar__main{
+        padding: 5px 10px;
+    }
+
     .navbar__img{
         width: 3rem;
         object-fit: cover;
