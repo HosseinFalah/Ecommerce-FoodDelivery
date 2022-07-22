@@ -1,6 +1,8 @@
 import { useRef, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { NavLink } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { cartUiActions } from "../../Redux/Shopping/cartUiSlice"
 
 import logo from "../../Asset/images/res-logo.png";
 
@@ -19,7 +21,14 @@ const nav__links = [
 const Header = () => {
     const menuRef = useRef(null)
     const stickyNavbar = useRef(null)
+    const totalQuantity = useSelector(state => state.cart.totalQuantity)
+    const dispatch = useDispatch()
+
     const toggleMenu = () => menuRef.current.classList.toggle("show__menu")
+
+    const toggleCart = () => {
+        dispatch(cartUiActions.toggle())
+    }
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -55,9 +64,9 @@ const Header = () => {
                     </nav>
                     {/* Menu Icon */}
                     <div className="navbar__icons">
-                        <span className="icon__shoppingcart">
+                        <span className="icon__shoppingcart" onClick={toggleCart}>
                             <AiOutlineShoppingCart/>
-                            <span className="icon__bage">1</span>
+                            <span className="icon__bage">{totalQuantity}</span>
                         </span>
                         <span className="icon__user">
                             <BiUser/>

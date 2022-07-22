@@ -1,0 +1,39 @@
+.cart__product{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.cart__product-img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.cart_product-title{
+    font-size: .8rem;
+    font-weight: 500;
+    width: 100px;
+}
+
+.cart__btn{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.btn__counter{
+    padding: 0 10px;
+}
+
+.cart__product-price{
+    color: #df2020;
+}
+
+.btn__trash{
+    color: #df2020;
+}

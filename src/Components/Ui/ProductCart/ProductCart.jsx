@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom";
 import "./productCart.css";
 
+import { useDispatch } from "react-redux"
+import { cartAction } from "../../../Redux/Shopping/cartSlice"
+
 const ProductCart = ({product}) => {
-    const { id, title, image01, price } = product
+    const { id, title, image01, price } = product;
+
+    const dispatch = useDispatch()
+
+    const addToCart = () => {
+        dispatch(cartAction.addItem({
+            id,
+            title,
+            image01,
+            price
+        }))
+    }
+
     return (
         <>
             <div className="product__item">
@@ -13,7 +28,7 @@ const ProductCart = ({product}) => {
                     </h5>
                     <div className="product__btns">
                         <span className="product__price">${price}</span>
-                        <button className="add_to_cart">Add To Cart</button>
+                        <button className="add_to_cart" onClick={addToCart}>Add To Cart</button>
                     </div>
                 </div>
             </div>
