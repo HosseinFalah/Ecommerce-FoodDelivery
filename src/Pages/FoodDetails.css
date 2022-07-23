@@ -3,6 +3,11 @@
     height: 100px;
     object-fit: cover;
     cursor: pointer;
+    transition:  all 0.5s ease;
+}
+
+.img__details:hover{
+    transform: scale(1.2);
 }
 
 .product__images-details{

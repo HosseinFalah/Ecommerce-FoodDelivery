@@ -24,7 +24,7 @@ const FoodDetails = () => {
             <section>
                 <div className="container">
                     <div className="row">
-                        <div className="col">
+                        <div className="col mt-2">
                             <div className="row">
                                 <div onClick={() => setPreviewImg(product.image01)}>
                                     <img src={product.image01} className="img__details" alt="" />
