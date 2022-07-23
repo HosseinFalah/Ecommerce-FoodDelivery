@@ -1,18 +1,38 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom";
 
 import products from "../Asset/fake-data/products";
 
+import ProductCart from "../Components/Ui/ProductCart/ProductCart";
+
+import { useDispatch } from "react-redux";
+import { cartAction } from "../Redux/Shopping/cartSlice";
 import "./FoodDetails.css"
 
 const FoodDetails = () => {
     const [tab, setTab] = useState('desc');
     const {id} = useParams()
-
+    const dispatch = useDispatch()
 
     const product = products.find(product => product.id === id);
     const [previewImg, setPreviewImg] = useState(product.image01)
-    const { title, price, category, desc } = product
+    const { title, price, category, desc, image01 } = product
+
+    const relatedProduct = products.filter(item => category === item.category)
+
+    const addItem = () => {
+        dispatch(cartAction.addItem({
+            id, title, price, image01
+        }))
+    }
+
+    useEffect(() => {
+        setPreviewImg(product.image01)
+    }, [product])
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [product])
 
     return (
         <>
@@ -21,10 +41,10 @@ const FoodDetails = () => {
                     <h2 className="text-white">Product {id.split("")[1]}</h2>
                 </div>
             </section>
-            <section>
+            <section className="mt-2">
                 <div className="container">
                     <div className="row">
-                        <div className="col mt-2">
+                        <div className="col">
                             <div className="row">
                                 <div onClick={() => setPreviewImg(product.image01)}>
                                     <img src={product.image01} className="img__details" alt="" />
@@ -47,7 +67,7 @@ const FoodDetails = () => {
                                 <h2 className="mb-2">{title}</h2>
                                 <span className="product__price">Price: ${price}</span>
                                 <p className="mt-2">Category: <span className="badge">{category}</span></p>
-                                <button className="btn btn__outline--danger mt-2">Add To Cart</button>
+                                <button onClick={addItem} className="btn btn__outline--danger mt-2">Add To Cart</button>
                             </div>
                         </div>
                     </div>
@@ -89,8 +109,18 @@ const FoodDetails = () => {
                                         </div>
                                         <button type="submit" className="btn btn__outline--danger">Submit</button>
                                     </form> 
-                                 </>
+                                </>
                             )
+                        }
+                    </div>
+                    <div className="col">
+                        <h2 className="products__title">You might also like</h2>
+                    </div>
+                    <div className="row mb-2">
+                        {
+                            relatedProduct.map(item => (
+                                <ProductCart product={item}/>
+                            ))
                         }
                     </div>
                 </div>
