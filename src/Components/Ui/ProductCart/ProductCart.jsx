@@ -24,7 +24,7 @@ const ProductCart = ({product}) => {
                 <img src={image01} className="product__img" alt="ProductImg" />
                 <div className="product__content mt-2">
                     <h5 className="sub__title">
-                        <Link to={`/food/${id}`} className="product__title">{title}</Link>
+                        <Link to={`/foods/${id}`} className="product__title">{title}</Link>
                     </h5>
                     <div className="product__btns">
                         <span className="product__price">${price}</span>

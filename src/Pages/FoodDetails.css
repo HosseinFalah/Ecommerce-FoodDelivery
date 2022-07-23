@@ -1,0 +1,76 @@
+.img__details{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.product__images-details{
+    width: 250px;
+    object-fit: cover;
+}
+
+.badge{
+    font-size: .9rem;
+    font-weight: 400;
+    color: #484848;
+    background: #ffd1d1;
+    padding: .35em .65em;
+    border-radius: 10px;
+}
+
+.tabs{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.5rem;
+    width: 100%;
+    border-bottom: 1px solid #d0d2d2;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+.tab__content{
+    margin: 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.tab__active{
+    color: #df2020;
+}
+
+.tab__form{
+    width: 60%;
+    margin: auto;
+    background: #fde4e4;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.form__group{
+    margin-bottom: 30px;
+}
+
+.form__controll{
+    width: 100%;
+    background: transparent;
+    padding: 8px 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #212245b6;
+}
+
+.user__name{
+    font-family: 600;
+    color: #212245;
+}
+
+.user__email{
+    font-size: 0.8rem;
+}
+
+.feedback__text{
+    color: #212224a2;
+}
