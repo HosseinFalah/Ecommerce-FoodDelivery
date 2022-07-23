@@ -36,14 +36,14 @@ const AllFoods = () => {
                 </div>
             </section>
             <section className="container">
-                    <div className="row mt-2">
+                    <div className="row mt-2 mb-2">
                         <div className="col">
                             <div className="food__search">
                                 <input type="text" value={search} onChange={(e) => setSearch(e.target.value.trim())} placeholder="I'M Looking" />
                                 <AiOutlineSearch/>
                             </div>
                         </div>
-                        <div className="col mb-2">
+                        <div className="col">
                             <div className="food__sorting">
                                 <select className="sorting__select">
                                     <option>Default</option>

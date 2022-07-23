@@ -83,3 +83,32 @@
 .products__title{
     margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 768px) {
+    .product__desc{
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.5rem;
+    }
+    
+    .details__title{
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .row__details{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+    }
+    
+    .product__images{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+    }
+}

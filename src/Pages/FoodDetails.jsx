@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 
 import products from "../Asset/fake-data/products";
 
@@ -11,8 +12,11 @@ import "./FoodDetails.css"
 
 const FoodDetails = () => {
     const [tab, setTab] = useState('desc');
-    const {id} = useParams()
-    const dispatch = useDispatch()
+    const {id} = useParams();
+    const [userName, setUserName] = useState("");
+    const [userEmail, setUserEmail] = useState("");
+    const [userMesseage, setUserMesseage] = useState("");
+    const dispatch = useDispatch();
 
     const product = products.find(product => product.id === id);
     const [previewImg, setPreviewImg] = useState(product.image01)
@@ -24,6 +28,10 @@ const FoodDetails = () => {
         dispatch(cartAction.addItem({
             id, title, price, image01
         }))
+    }
+
+    const submitHandler = e => {
+        e.preventDefault();
     }
 
     useEffect(() => {
@@ -45,7 +53,7 @@ const FoodDetails = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <div className="row">
+                            <div className="row__details">
                                 <div onClick={() => setPreviewImg(product.image01)}>
                                     <img src={product.image01} className="img__details" alt="" />
                                 </div>
@@ -64,7 +72,7 @@ const FoodDetails = () => {
                         </div>
                         <div className="col">
                             <div className="product__details">
-                                <h2 className="mb-2">{title}</h2>
+                                <h2 className="details__title mb-2">{title}</h2>
                                 <span className="product__price">Price: ${price}</span>
                                 <p className="mt-2">Category: <span className="badge">{category}</span></p>
                                 <button onClick={addItem} className="btn btn__outline--danger mt-2">Add To Cart</button>
@@ -78,7 +86,7 @@ const FoodDetails = () => {
                         </div>
                         {tab === "desc" ? ( 
                             <div className="tab__content">
-                                <p>{desc}</p>
+                                <p className="product__desc">{desc}</p>
                             </div>
                             ) : (
                                 <>
@@ -97,15 +105,33 @@ const FoodDetails = () => {
                                         <p className="user__email">hosseinfalah2021@gmail.com</p>
                                         <p className="feedback__text">great product</p>
                                     </div>
-                                    <form className="tab__form">
+                                    <form className="tab__form" onSubmit={submitHandler}>
                                         <div className="form__group">
-                                            <input type="text" className="form__controll" placeholder="Enter Your Name"/>
+                                            <input 
+                                                type="text"
+                                                className="form__controll"
+                                                onChange={(e) => setUserName(e.target.value)}
+                                                placeholder="Enter Your Name"
+                                                required
+                                                />
                                         </div>
                                         <div className="form__group">
-                                            <input type="text" className="form__controll" placeholder="Enter Your Name"/>
+                                            <input 
+                                                type="text"
+                                                className="form__controll"
+                                                onChange={(e) => setUserEmail(e.target.value)}
+                                                placeholder="Enter Your Name"
+                                                required
+                                                />
                                         </div>
                                         <div className="form__group">
-                                            <textarea type="text" rows={5} className="form__controll" placeholder="Enter Your Name"></textarea>
+                                            <textarea 
+                                                type="text"
+                                                rows={5} className="form__controll"
+                                                onChange={(e) => setUserMesseage(e.target.value)}
+                                                placeholder="Enter Your Name"
+                                                required
+                                                ></textarea>
                                         </div>
                                         <button type="submit" className="btn btn__outline--danger">Submit</button>
                                     </form> 
@@ -119,7 +145,7 @@ const FoodDetails = () => {
                     <div className="row mb-2">
                         {
                             relatedProduct.map(item => (
-                                <ProductCart product={item}/>
+                                <ProductCart product={item} key={uuidv4()}/>
                             ))
                         }
                     </div>
