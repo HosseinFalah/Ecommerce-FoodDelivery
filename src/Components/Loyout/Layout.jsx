@@ -16,7 +16,7 @@ const Layout = () => {
                 {
                     showCart && <Carts/>
                 }
-                <main className="p-2">
+                <main>
                     <Routes/>
                 </main>        
             <Footer/>    

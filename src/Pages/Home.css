@@ -64,6 +64,10 @@
     border: 1px solid #d01d1d5d;
 }
 
+.btn__outline--danger a{
+    color: #fff;
+}
+
 .img__fluid{
     width: 100%;
     object-fit: contain;

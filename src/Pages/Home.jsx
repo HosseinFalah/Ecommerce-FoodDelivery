@@ -57,7 +57,7 @@ const Home = () => {
 
     return (
         <>
-            <section>
+            <section className="p-2">
                 <div className="container">
                     <div className="main__row">
                         <div className="col">
