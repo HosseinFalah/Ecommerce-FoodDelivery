@@ -1,6 +1,8 @@
 import { v4 as uuidv4 } from "uuid";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 //Icon
 import { BsArrowRight } from "react-icons/bs";
@@ -55,13 +57,15 @@ const Home = () => {
         }
     }, [category])
 
+    AOS.init();
+
     return (
         <>
             <section className="p-2">
                 <div className="container">
                     <div className="main__row">
                         <div className="col">
-                            <div className="main__content mt-2">
+                            <div className="main__content mt-2" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="300" data-aos-easing="ease-in-sine">
                                 <h5>Easy Way To Make An Order</h5>
                                 <h1 className="main__title">
                                     <span className="main__display">Hungry? </span>
@@ -98,7 +102,7 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col">
-                            <div className="main__img">
+                            <div className="main__img" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1500" data-aos-anchor="#example-anchor" data-aos-offset="500">
                                 <img src={hero} className="img__fluid" alt="main__img" />
                             </div>
                         </div>
@@ -107,7 +111,7 @@ const Home = () => {
             </section>
             <Category/>
             <Feature/>
-            <section>
+            <section data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1500">
                 <div className="container">
                     <div className="d-flex">
                         <div className="col">
@@ -143,10 +147,10 @@ const Home = () => {
             <section>
                 <div className="container">
                     <div className="main__row mb-2">
-                        <div className="col">
+                        <div className="col" data-aos="fade-right" data-aos-duration="1500" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <img src={whyImg} className="img__fluid" alt="why_tasty_treat" />
                         </div>
-                        <div className="col">
+                        <div className="col" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="300" data-aos-easing="ease-in-sine">
                             <div className="why__tasty-treat">
                                 <h2 className="why__tasty-title">Why <span>Tasty Treat?</span></h2>
                                 <p className="mt-2 why__tasty-description">The brand is present in many ready-to-eat indulgence categories, from biscuits to namkeens,
@@ -184,7 +188,7 @@ const Home = () => {
             </section>
             <section>
                 <div className="container">
-                    <div className="col">
+                    <div className="col" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div className="col mt-2 mx-auto">
                             <h2 className="mb-2">Hot Pizza</h2>
                         </div>
@@ -198,7 +202,7 @@ const Home = () => {
             </section>
             <section>
                 <div className="container">
-                    <div className="main__row">
+                    <div className="main__row" data-aos="zoom-in-down" data-aos-duration="1500" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <div className="col">
                             <div className="testimonial mt-2">
                                 <h5 className="testimonial__subtirle mb-2">Testimonial</h5>

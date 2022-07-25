@@ -8,6 +8,10 @@ body{
     font-family: Vazir;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
 }

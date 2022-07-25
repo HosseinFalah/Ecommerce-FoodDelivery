@@ -20,7 +20,7 @@ const Category = () => {
                 <div className="row">
                     {categoryData.map(category => (
                         <div className="col" key={uuidv4()}>
-                            <div className="main__category">
+                            <div className="main__category" data-aos="fade-up" data-aos-easing="ease-in-sine" data-aos-duration="1500" data-aos-offset="500">
                                 <div className="main__category-img">
                                     <img src={category.imgUrl} alt={category.display} />
                                 </div>

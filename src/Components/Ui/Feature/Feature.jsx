@@ -31,8 +31,8 @@ const Feature = () => {
         <section>
             <div className="container">
                 <div className="row">
-                    <div className="">
-                        <div className="text-center">
+                    <div>
+                        <div className="text-center" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                             <h5 className="feature__subtitle">What We Serve</h5>
                             <h2 className="feature__title">Just Sit Back at Home</h2>
                             <h2 className="feature__title">We Will <span>Task Care</span></h2>
@@ -43,7 +43,7 @@ const Feature = () => {
                         </div>
                         <div className="feature__box">
                             {featuerData.map(feature => (
-                                <div className="feature__item" key={uuidv4()}>
+                                <div className="feature__item" key={uuidv4()} data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                                     <img src={feature.imgUrl} className="feature__img" alt={feature.title} />
                                     <h5 className="feature__title">{feature.title}</h5>
                                     <p className="feature__description">{feature.desc}</p>

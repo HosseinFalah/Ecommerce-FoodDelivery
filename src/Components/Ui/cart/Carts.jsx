@@ -20,7 +20,7 @@ const Carts = () => {
 
     return (
         <div className="cart__container">
-            <div className="cart">
+            <div className="cart" data-aos="fade-left" data-aos-duration="1500" data-aos-offset="300" data-aos-easing="ease-in-sine">
                 <AiOutlineClose className="cart__close" onClick={toggleCart}/>
                 <div className="cart_item-list">
                     {cartProducts.length === 0 ? (
