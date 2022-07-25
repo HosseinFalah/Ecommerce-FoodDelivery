@@ -1,0 +1,11 @@
+.login__form{
+    background: #ffcece;
+    margin: 20px auto;
+    padding: 20px 40px;
+}
+
+.login__register{
+    margin-top: 20px;
+    display: block;
+    color: #4f4f4f;
+}

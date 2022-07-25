@@ -1,0 +1,63 @@
+.table, td, th {  
+    border: 1px solid #ddd;
+}
+  
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+  
+th {
+    padding: 15px;
+}
+
+td{
+    padding: 5px;
+}
+
+.table__img{
+    width: 100px;
+    height: 100px;
+}
+
+.table__trash{
+    background: #df2020;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.cart__price{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.table__btn{
+    margin: 20px 0;
+    gap: 20px;
+}
+
+.table__btn button {
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 576px) {
+    th {
+        padding: 10px;
+    }
+    
+    td{
+        padding: 5px;
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    
+    .table__img{
+        width: 70px;
+        height: 70px;
+    }
+}

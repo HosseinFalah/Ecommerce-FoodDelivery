@@ -1,0 +1,54 @@
+.checkout__form{
+    width: 100%;
+}
+
+.total__Amount{
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total__Cost{
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+}
+
+.total__Price{
+    margin-top: 20px;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #555555;
+    padding-top: 20px;
+}
+
+.checkout__fill{
+    background: #ffcaca;
+    width: 100%;
+    margin: 20px 0;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.checkout__flex{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+@media only screen and (max-width: 768px) {
+    .total__Amount,
+    .total__Cost,
+    .total__Price{
+        font-size: 1rem;
+    }
+}

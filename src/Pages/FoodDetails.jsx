@@ -111,6 +111,7 @@ const FoodDetails = () => {
                                                 type="text"
                                                 className="form__controll"
                                                 onChange={(e) => setUserName(e.target.value)}
+                                                value={userName}
                                                 placeholder="Enter Your Name"
                                                 required
                                                 />
@@ -120,7 +121,8 @@ const FoodDetails = () => {
                                                 type="text"
                                                 className="form__controll"
                                                 onChange={(e) => setUserEmail(e.target.value)}
-                                                placeholder="Enter Your Name"
+                                                value={userEmail}
+                                                placeholder="Enter Your Email"
                                                 required
                                                 />
                                         </div>
@@ -129,7 +131,8 @@ const FoodDetails = () => {
                                                 type="text"
                                                 rows={5} className="form__controll"
                                                 onChange={(e) => setUserMesseage(e.target.value)}
-                                                placeholder="Enter Your Name"
+                                                value={userMesseage}
+                                                placeholder="Enter Your Message"
                                                 required
                                                 ></textarea>
                                         </div>
