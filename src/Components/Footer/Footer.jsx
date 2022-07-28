@@ -54,7 +54,7 @@ const Footer = () => {
                 </div>
                 <div className="main__row mt-2">
                     <div>
-                        <p className="copyright__text">CopyRight - 2022, wesite made by Muibur Rahman. All Rights Reserved.</p>
+                        <p className="copyright__text">CopyRight - 2022, wesite made by HosseinFalah. All Rights Reserved.</p>
                     </div>
                     <div>
                         <div className="social__links">
